@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: muhasebe_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: muhasebe
+      POSTGRES_USER: muhasebe_usr
+      POSTGRES_PASSWORD: muhasebe_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - muhasebe_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U muhasebe_usr -d muhasebe"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  muhasebe_pgdata:
