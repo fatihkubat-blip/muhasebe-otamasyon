@@ -6,6 +6,7 @@ Bu repo artik ERP icine gomulu calisan finance extension kaynagidir. Ana calisma
 
 - Kaynak gercek: `backend/`
 - Sozlesme gercek: `contracts/`
+- UI ve pencere davranisi gercek: `contracts/ui-contract.json`
 - Kesif ve surum gercek: `module-manifest.json`
 - ERP tarafi yalniz adaptor ve loader katmanidir
 
@@ -55,4 +56,3 @@ Bu alanlar yeni embedded ERP akisinda kaynak gercek degildir. Yeni finans davran
 Guncel entegrasyon ve panel durumu icin:
 
 - `docs/erp-integration-status.md`
-

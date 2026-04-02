@@ -1,0 +1,322 @@
+{
+  "name": "Finance UI Contract",
+  "version": "2026.04",
+  "description": "GitHub source of truth for finance window behavior, tabs, actions, titles, and theme tokens.",
+  "module_slug": "finance-gl",
+  "display_name": "Muhasebe ve Finans UI Contract",
+  "contract_version": "2026.04",
+  "theme_tokens": {
+    "shell_page_background": "linear-gradient(180deg, #dfe6ec 0%, #f3f6f8 100%)",
+    "shell_frame_border": "#cad5df",
+    "shell_header_gradient_start": "#718195",
+    "shell_header_gradient_end": "#5d6e83",
+    "shell_header_text": "#f7fbff",
+    "window_text": "#1f3446",
+    "window_intro_border": "#b8c6d1",
+    "window_intro_gradient_start": "#eef4f8",
+    "window_intro_gradient_end": "#dce7ef",
+    "window_title": "#24435f",
+    "window_subtitle": "#5c7387",
+    "status_badge_border": "#adc0ce",
+    "status_badge_background": "#ffffff",
+    "status_badge_text": "#32516d",
+    "command_chip_border": "#c7d2dc",
+    "command_chip_background": "#f7fafc",
+    "command_chip_text": "#526c82",
+    "command_chip_critical_border": "#bfa267",
+    "command_chip_critical_background": "#f7efd8",
+    "command_chip_critical_text": "#6c5730",
+    "panel_border": "#b9c8d4",
+    "panel_header_gradient_start": "#f7f9fb",
+    "panel_header_gradient_end": "#e9eff4",
+    "panel_header_text": "#2b4760",
+    "action_primary_start": "#4a98d3",
+    "action_primary_end": "#2f73a9",
+    "action_primary_text": "#f7fbff",
+    "action_secondary_border": "#b8c7d3",
+    "action_secondary_background": "linear-gradient(180deg, #ffffff 0%, #eef3f7 100%)",
+    "action_secondary_text": "#29445b",
+    "reference_page_background": "#f4f6f8",
+    "reference_topbar_start": "#3f94d0",
+    "reference_topbar_end": "#2d75b4",
+    "reference_topbar_text": "#f4fbff",
+    "reference_utility_active": "#2f78b6",
+    "reference_utility_active_text": "#244561",
+    "reference_rail_background": "#56646f",
+    "reference_rail_text": "#eff6fa",
+    "reference_filter_background": "#62717d",
+    "reference_filter_border": "#758897",
+    "reference_filter_text": "#f5fbff",
+    "reference_main_background": "#ffffff",
+    "reference_ribbon_background": "#f4efe2",
+    "reference_ribbon_button_background": "#ffffff",
+    "reference_ribbon_button_text": "#28445d",
+    "reference_badge_background": "#7a4b78",
+    "reference_badge_text": "#ffffff",
+    "metric_card_border": "#c5d1da",
+    "metric_card_gradient_start": "#ffffff",
+    "metric_card_gradient_end": "#f2f6f9",
+    "metric_label": "#6c8194",
+    "metric_value": "#1d3a53",
+    "metric_foot": "#6d8192",
+    "panel_background": "#ffffff",
+    "panel_highlight": "#ffffff",
+    "panel_header_border": "#d3dde5",
+    "table_border": "#dce4ea",
+    "table_head_background": "#f1f5f8",
+    "table_head_text": "#60798d",
+    "table_row_even_background": "#fbfcfd",
+    "table_input_border": "#b6c7d4",
+    "table_input_gradient_start": "#ffffff",
+    "table_input_gradient_end": "#f5f8fb",
+    "table_input_text": "#1f374a",
+    "label_cell_text": "#587083",
+    "label_cell_background": "#f7fafc",
+    "action_primary_border": "#2f73a9",
+    "message_border": "#bfd0db",
+    "message_background": "#f5f9fc",
+    "message_text": "#27445d",
+    "field_label": "#60788c",
+    "field_input_border": "#c5d2dc",
+    "field_input_background": "#ffffff",
+    "field_input_text": "#1f374a",
+    "subsection_title": "#5f7689",
+    "rule_list_text": "#324d65",
+    "voucher_type_border": "#b9c8d4",
+    "voucher_type_gradient_start": "#ffffff",
+    "voucher_type_gradient_end": "#eef3f7",
+    "voucher_type_text": "#28445d",
+    "voucher_type_active_border": "#2f73a9",
+    "voucher_type_active_start": "#4a98d3",
+    "voucher_type_active_end": "#2f73a9",
+    "voucher_type_active_text": "#f7fbff",
+    "eta_board_border": "#b6c4cf",
+    "eta_board_gradient_start": "#fffef8",
+    "eta_board_gradient_end": "#f3ede0",
+    "eta_title": "#23435d",
+    "eta_subtitle": "#64798c",
+    "eta_meta_border": "#d7e0e7",
+    "eta_meta_background": "rgba(255, 255, 255, 0.9)",
+    "eta_meta_label": "#6b8092",
+    "eta_meta_value": "#23405a"
+  },
+  "source_band": [
+    { "label": "SQLite", "tone": "default" },
+    { "label": "Finans", "tone": "default" },
+    { "label": "e-Belge", "tone": "critical" }
+  ],
+  "status_badges": [
+    "Popup calisma modeli",
+    "VUK / Tek Duzen",
+    "Drill-down zorunlu"
+  ],
+  "window_family_tabs": [
+    { "label": "Genel Gorunum", "template_code": "overview" },
+    { "label": "Hesap Plani", "template_code": "chart-of-accounts" },
+    { "label": "Yeni Fis", "template_code": "voucher-new" },
+    { "label": "Fis Listesi", "template_code": "voucher-list" },
+    { "label": "Mizan", "template_code": "trial-balance" },
+    { "label": "Muavin", "template_code": "subledger" },
+    { "label": "Buyuk Defter", "template_code": "ledger" },
+    { "label": "Banka Mutabakati", "template_code": "bank-reconciliation" },
+    { "label": "Musteri Cari", "template_code": "customer-current-accounts" },
+    { "label": "Satici Cari", "template_code": "vendor-current-accounts" },
+    { "label": "Parametreler", "template_code": "parameters" },
+    { "label": "Entegrator Profilleri", "template_code": "integrator-profiles" },
+    { "label": "Vergi Uyumu", "template_code": "tax-compliance" },
+    { "label": "Donem Kapanis", "template_code": "period-close" },
+    { "label": "e-Belge", "template_code": "e-documents" },
+    { "label": "e-Defter", "template_code": "e-ledger" },
+    { "label": "Mali Takvim", "template_code": "fiscal-calendar" },
+    { "label": "Rapor Snapshot", "template_code": "report-snapshots" }
+  ],
+  "popup_actions": [
+    { "label": "Hesap Plani", "template_code": "chart-of-accounts" },
+    { "label": "Yeni Fis", "template_code": "voucher-new" },
+    { "label": "Fis Listesi", "template_code": "voucher-list" },
+    { "label": "Mizan", "template_code": "trial-balance" },
+    { "label": "Muavin", "template_code": "subledger" },
+    { "label": "Buyuk Defter", "template_code": "ledger" },
+    { "label": "Banka Mutabakati", "template_code": "bank-reconciliation" },
+    { "label": "Musteri Cari", "template_code": "customer-current-accounts" },
+    { "label": "Satici Cari", "template_code": "vendor-current-accounts" },
+    { "label": "Parametreler", "template_code": "parameters" },
+    { "label": "Vergi Uyumu", "template_code": "tax-compliance" },
+    { "label": "Donem Kapanis", "template_code": "period-close" },
+    { "label": "Entegrator Profilleri", "template_code": "integrator-profiles" },
+    { "label": "e-Belge", "template_code": "e-documents" },
+    { "label": "e-Defter", "template_code": "e-ledger" },
+    { "label": "Mali Takvim", "template_code": "fiscal-calendar" },
+    { "label": "Rapor Snapshot", "template_code": "report-snapshots" }
+  ],
+  "reference_shell": {
+    "topbar_title": "Turkiye Muhasebe ve Finans Baslatma Merkezi",
+    "utility_tabs": [
+      { "label": "Ana Sayfa", "route": "/" },
+      { "label": "Finans ve Buyuk Defter", "route": "/modules/finance-gl" },
+      { "label": "Yeni Fis Penceresi", "template_code": "voucher-new" }
+    ],
+    "filter_actions": [
+      { "label": "Hesap Plani", "template_code": "chart-of-accounts" },
+      { "label": "Yeni Fis", "template_code": "voucher-new" },
+      { "label": "Fis Listesi", "template_code": "voucher-list" },
+      { "label": "Mizan", "template_code": "trial-balance" },
+      { "label": "Muavin", "template_code": "subledger" },
+      { "label": "Buyuk Defter", "template_code": "ledger" },
+      { "label": "Banka Mutabakati", "template_code": "bank-reconciliation" },
+      { "label": "Musteri Cari", "template_code": "customer-current-accounts" },
+      { "label": "Satici Cari", "template_code": "vendor-current-accounts" },
+      { "label": "Parametreler", "template_code": "parameters" },
+      { "label": "Entegrator Profilleri", "template_code": "integrator-profiles" },
+      { "label": "Vergi Uyumu", "template_code": "tax-compliance" },
+      { "label": "Donem Kapanis", "template_code": "period-close" },
+      { "label": "e-Belge Merkezi", "template_code": "e-documents" },
+      { "label": "e-Defter Merkezi", "template_code": "e-ledger" },
+      { "label": "Mali Takvim", "template_code": "fiscal-calendar" },
+      { "label": "Rapor Snapshot", "template_code": "report-snapshots" }
+    ],
+    "ribbon_actions": [
+      { "label": "Yeni Fis", "template_code": "voucher-new" },
+      { "label": "Fisleri Ac", "template_code": "voucher-list" },
+      { "label": "Mizan Ac", "template_code": "trial-balance" },
+      { "label": "Buyuk Defter Ac", "template_code": "ledger" },
+      { "label": "Musteri Cari", "template_code": "customer-current-accounts" },
+      { "label": "Satici Cari", "template_code": "vendor-current-accounts" },
+      { "label": "Parametreler", "template_code": "parameters" },
+      { "label": "Entegrator", "template_code": "integrator-profiles" },
+      { "label": "Vergi Uyumu", "template_code": "tax-compliance" },
+      { "label": "e-Belge Ac", "template_code": "e-documents" },
+      { "label": "e-Defter", "template_code": "e-ledger" },
+      { "label": "Mali Takvim", "template_code": "fiscal-calendar" },
+      { "label": "Snapshot", "template_code": "report-snapshots" }
+    ],
+    "status_badges": [
+      "VUK / Tek Duzen",
+      "GitHub source",
+      "SQLite runtime"
+    ],
+    "action_message": "Tum kritik muhasebe ve finans akislari artik GitHub kaynakli pencere sozlesmesiyle ayri pencerelerde acilir."
+  },
+  "windows": [
+    {
+      "template_code": "overview",
+      "title": "Muhasebe Operasyon Masasi",
+      "subtitle": "ETA, Logo ve Mikro masaustu duzenine yakin pencere bazli calisma yuzeyi",
+      "source_action": "finance-overview"
+    },
+    {
+      "template_code": "voucher-new",
+      "title": "Yeni Fis Girisi",
+      "subtitle": "Tek Duzen hesap plani, VUK kurallari ve pencere bazli muhasebe akisi",
+      "source_action": "voucher-new",
+      "rules": [
+        "Borc ve alacak toplamlari esit olmadan fis kaydi tamamlanmaz.",
+        "Sirket, sube, donem ve defter baglami ayri pencere oturumunda saklanir.",
+        "Belge numarasi benzersiz olmadan kayit kabul edilmez.",
+        "Kaydetme sonrasi detay, fis listesi ve buyuk defter pencereleri ayri acilir."
+      ]
+    },
+    {
+      "template_code": "voucher-detail",
+      "title_prefix": "Fis Detayi / ",
+      "subtitle": "Kaydedilen belgenin satir, bakiye ve baglam kontrol penceresi",
+      "source_action": "voucher-detail"
+    },
+    {
+      "template_code": "voucher-list",
+      "title": "Fis Listesi",
+      "subtitle": "Taslak, post ve ters kayit akislarini yoneten gercek fis operasyon penceresi",
+      "source_action": "voucher-list"
+    },
+    {
+      "template_code": "chart-of-accounts",
+      "title": "Hesap Plani",
+      "subtitle": "Tek Duzen hesap kodlari, bakiye ve hesap turu listesi",
+      "source_action": "chart-of-accounts"
+    },
+    {
+      "template_code": "trial-balance",
+      "title": "Mizan",
+      "subtitle": "Borc, alacak ve bakiye dagiliminin toplu kontrol penceresi",
+      "source_action": "trial-balance"
+    },
+    {
+      "template_code": "subledger",
+      "title": "Muavin",
+      "subtitle": "Hesap kartindan satir bazli yevmiye hareketi ve running balance takibi",
+      "source_action": "subledger"
+    },
+    {
+      "template_code": "ledger",
+      "title": "Buyuk Defter",
+      "subtitle": "Fis ve hesap satirlarinin borc-alacak etkisini gosteren pencere",
+      "source_action": "ledger"
+    },
+    {
+      "template_code": "bank-reconciliation",
+      "title": "Banka ve Kasa Mutabakati",
+      "subtitle": "Defter, tahsilat ve hareket zincirinin fark bazli kontrol penceresi",
+      "source_action": "bank-reconciliation"
+    },
+    {
+      "template_code": "customer-current-accounts",
+      "title": "Musteri Cari Kartlari",
+      "subtitle": "Tahsilat ve ekstre takibi",
+      "source_action": "customer-current-accounts"
+    },
+    {
+      "template_code": "vendor-current-accounts",
+      "title": "Satici Cari Kartlari",
+      "subtitle": "Tedarikci ve odeme plani takibi",
+      "source_action": "vendor-current-accounts"
+    },
+    {
+      "template_code": "parameters",
+      "title": "Muhasebe Parametreleri",
+      "subtitle": "Sabit tanim, seri, belge ve rapor parametrelerinin teknik pencere merkezi",
+      "source_action": "parameters"
+    },
+    {
+      "template_code": "integrator-profiles",
+      "title": "Entegrator Profilleri",
+      "subtitle": "e-Belge test, uretim, sertifika ve endpoint yonetim penceresi",
+      "source_action": "integrator-profiles"
+    },
+    {
+      "template_code": "tax-compliance",
+      "title": "Vergi ve Yasal Uyum",
+      "subtitle": "KDV, stopaj, belge ve yasal kontrol zincirinin teknik pencere merkezi",
+      "source_action": "tax-compliance"
+    },
+    {
+      "template_code": "period-close",
+      "title": "Donem Acilis ve Kapanis",
+      "subtitle": "Acik donem, blocker ve kapanis hazirlik kontrol penceresi",
+      "source_action": "period-close"
+    },
+    {
+      "template_code": "e-documents",
+      "title": "e-Belge Merkezi",
+      "subtitle": "GIB kaynagi, ozel entegrator modeli ve belge yasam dongusu penceresi",
+      "source_action": "e-documents"
+    },
+    {
+      "template_code": "e-ledger",
+      "title": "e-Defter Merkezi",
+      "subtitle": "Yevmiye, buyuk defter ve berat akisinin resmi pencere zinciri",
+      "source_action": "e-ledger"
+    },
+    {
+      "template_code": "fiscal-calendar",
+      "title": "Mali Takvim",
+      "subtitle": "GIB, VUK ve donem sonu son tarih zincirinin parametrik penceresi",
+      "source_action": "fiscal-calendar"
+    },
+    {
+      "template_code": "report-snapshots",
+      "title": "Rapor Snapshot Merkezi",
+      "subtitle": "Yasal raporlarin export, drill ve snapshot kontrol penceresi",
+      "source_action": "report-snapshots"
+    }
+  ]
+}

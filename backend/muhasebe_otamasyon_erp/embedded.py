@@ -51,6 +51,12 @@ class EmbeddedFinanceService:
             "finance_extension_contract_version": self._metadata.contract_version,
         }
 
+    def ui_contract(self) -> dict[str, Any]:
+        contract = self._contracts.get("ui-contract", {})
+        if not isinstance(contract, dict):
+            return {}
+        return contract
+
     def __getattr__(self, item: str) -> Any:
         return getattr(self._host, item)
 

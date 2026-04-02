@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "module_slug": "muhasebe-otamasyon",
   "display_name": "Muhasebe Otomasyon Embedded Finance",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "revision": "main",
   "contract_version": "2026.04",
   "minimum_erp_contract_version": "2026.04",
@@ -33,9 +33,12 @@
     "subledger",
     "ledger",
     "bank-reconciliation",
+    "customer-current-accounts",
+    "vendor-current-accounts",
+    "parameters",
     "tax-compliance",
-    "period-close",
     "integrator-profiles",
+    "period-close",
     "e-documents",
     "e-ledger",
     "fiscal-calendar",
@@ -48,6 +51,9 @@
     "Muavin",
     "Buyuk Defter",
     "Banka Mutabakati",
+    "Musteri Cari",
+    "Satici Cari",
+    "Parametreler",
     "Vergi Uyumu",
     "Donem Kapanis",
     "e-Belge Merkezi",
@@ -76,6 +82,7 @@
     "chart_of_accounts": "contracts/chart-of-accounts-contract.json",
     "current_accounts": "contracts/current-accounts-contract.json",
     "e_documents": "contracts/e-documents-contract.json",
-    "reporting": "contracts/reporting-contract.json"
+    "reporting": "contracts/reporting-contract.json",
+    "ui_contract": "contracts/ui-contract.json"
   }
 }
