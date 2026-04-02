@@ -1,0 +1,32 @@
+{
+  "name": "Voucher Contract",
+  "version": "2026.04",
+  "description": "Typed fis baslik, satir ve baglam sozlesmesi.",
+  "request_fields": [
+    "entry_number",
+    "document_number",
+    "entry_date",
+    "document_date",
+    "due_date",
+    "voucher_type",
+    "company_id",
+    "branch_id",
+    "ledger_id",
+    "fiscal_year",
+    "fiscal_period",
+    "currency",
+    "exchange_rate",
+    "description",
+    "lines"
+  ],
+  "response_surfaces": [
+    "/api/erp/finance/vouchers",
+    "/api/erp/finance/voucher-template",
+    "/api/erp/finance/vouchers/{voucher_id}"
+  ],
+  "primary_tables": [
+    "journal_entries",
+    "journal_entry_lines",
+    "journal_entry_contexts"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Reporting Contract",
+  "version": "2026.04",
+  "description": "Mizan, muavin, buyuk defter ve snapshot raporlari icin typed pencere sozlesmesi.",
+  "response_surfaces": [
+    "/api/erp/finance/trial-balance",
+    "/api/erp/finance/subledger",
+    "/api/erp/finance/ledger",
+    "/api/erp/finance/report-snapshots",
+    "/api/modules/finance-gl/snapshot",
+    "/api/modules/accounting-hub/snapshot"
+  ],
+  "primary_tables": [
+    "journal_entries",
+    "journal_entry_lines",
+    "financial_snapshots",
+    "compliance_documents"
+  ]
+}

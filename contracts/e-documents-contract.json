@@ -1,0 +1,22 @@
+{
+  "name": "E-Documents Contract",
+  "version": "2026.04",
+  "description": "e-Belge, entegrator ve readiness durum sozlesmesi.",
+  "request_fields": [
+    "document_type",
+    "source_type",
+    "source_id",
+    "period_key",
+    "reference_code",
+    "payload"
+  ],
+  "response_surfaces": [
+    "/api/erp/finance/e-documents",
+    "/api/erp/finance/e-documents/integration-readiness",
+    "/api/erp/finance/compliance-documents"
+  ],
+  "primary_tables": [
+    "compliance_documents",
+    "accounting_parameters"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Current Accounts Contract",
+  "version": "2026.04",
+  "description": "Cari kart ve cari hareket sozlesmesi.",
+  "request_fields": [
+    "account_kind",
+    "account_code",
+    "display_name",
+    "tax_number",
+    "currency",
+    "entry_date",
+    "entry_kind",
+    "direction",
+    "amount"
+  ],
+  "response_surfaces": [
+    "/api/erp/finance/current-accounts/customers",
+    "/api/erp/finance/current-accounts/vendors",
+    "/api/erp/finance/current-accounts/cards",
+    "/api/erp/finance/current-accounts/cards/{card_id}/entries"
+  ],
+  "primary_tables": [
+    "current_account_cards",
+    "current_account_entries"
+  ]
+}

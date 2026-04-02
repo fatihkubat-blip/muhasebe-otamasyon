@@ -1,0 +1,81 @@
+{
+  "manifest_version": 1,
+  "module_slug": "muhasebe-otamasyon",
+  "display_name": "Muhasebe Otomasyon Embedded Finance",
+  "version": "1.1.0",
+  "revision": "main",
+  "contract_version": "2026.04",
+  "minimum_erp_contract_version": "2026.04",
+  "database_backend": "sqlite",
+  "database_mode": "embedded",
+  "backend": {
+    "root": "backend",
+    "package": "muhasebe_otamasyon_erp",
+    "factory": "create_embedded_finance_service"
+  },
+  "erp_surfaces": [
+    "finance-gl",
+    "accounting-hub"
+  ],
+  "erp_routes": [
+    "/modules/finance-gl",
+    "/modules/accounting-hub"
+  ],
+  "api_prefixes": [
+    "/api/erp/finance"
+  ],
+  "window_templates": [
+    "overview",
+    "chart-of-accounts",
+    "voucher-new",
+    "voucher-list",
+    "trial-balance",
+    "subledger",
+    "ledger",
+    "bank-reconciliation",
+    "tax-compliance",
+    "period-close",
+    "integrator-profiles",
+    "e-documents",
+    "e-ledger",
+    "fiscal-calendar",
+    "report-snapshots"
+  ],
+  "available_actions": [
+    "Yeni Fis",
+    "Fis Listesi",
+    "Mizan",
+    "Muavin",
+    "Buyuk Defter",
+    "Banka Mutabakati",
+    "Vergi Uyumu",
+    "Donem Kapanis",
+    "e-Belge Merkezi",
+    "e-Defter Merkezi",
+    "Mali Takvim",
+    "Rapor Snapshot"
+  ],
+  "storage": {
+    "mode": "sqlite-embedded",
+    "shared_session": true,
+    "tables": [
+      "journal_entries",
+      "journal_entry_lines",
+      "journal_entry_contexts",
+      "payments",
+      "account_movements",
+      "current_account_cards",
+      "current_account_entries",
+      "ledger_account_cards",
+      "treasury_accounts",
+      "compliance_documents"
+    ]
+  },
+  "contracts": {
+    "voucher": "contracts/voucher-contract.json",
+    "chart_of_accounts": "contracts/chart-of-accounts-contract.json",
+    "current_accounts": "contracts/current-accounts-contract.json",
+    "e_documents": "contracts/e-documents-contract.json",
+    "reporting": "contracts/reporting-contract.json"
+  }
+}

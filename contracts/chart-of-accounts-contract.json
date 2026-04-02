@@ -1,0 +1,23 @@
+{
+  "name": "Chart Of Accounts Contract",
+  "version": "2026.04",
+  "description": "Hesap plani karti ve mizan baglanti sozlesmesi.",
+  "request_fields": [
+    "code",
+    "name",
+    "account_class",
+    "account_type",
+    "balance_side",
+    "currency",
+    "opening_balance",
+    "status"
+  ],
+  "response_surfaces": [
+    "/api/erp/finance/chart-of-accounts",
+    "/api/erp/finance/chart-of-accounts/accounts"
+  ],
+  "primary_tables": [
+    "ledger_account_cards",
+    "journal_entry_lines"
+  ]
+}
