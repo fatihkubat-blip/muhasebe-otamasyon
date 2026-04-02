@@ -1,0 +1,28 @@
+# ── Web çerçevesi ──────────────────────────────────────────────────────────
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.35,<1.0
+
+# ── Veri doğrulama & ayarlar ───────────────────────────────────────────────
+pydantic>=2.7,<3.0
+pydantic-settings>=2.3,<3.0
+python-dotenv>=1.0,<2.0
+
+# ── Veritabanı ─────────────────────────────────────────────────────────────
+# SQL Server (üretim): mssql+pyodbc://user:pass@server/db?driver=ODBC+Driver+18+for+SQL+Server
+sqlalchemy>=2.0,<3.0
+pyodbc>=5.1
+# SQLite (geliştirme — built-in, ekstra paket gerekmez)
+
+# ── Migrasyon ──────────────────────────────────────────────────────────────
+alembic>=1.13,<2.0
+
+# ── Güvenlik ───────────────────────────────────────────────────────────────
+passlib[bcrypt]>=1.7,<2.0
+python-jose[cryptography]>=3.3,<4.0
+
+# ── Yardımcılar ────────────────────────────────────────────────────────────
+python-dateutil>=2.9,<3.0
+
+# ── Test ───────────────────────────────────────────────────────────────────
+pytest>=8.0,<9.0
+httpx>=0.27,<1.0
