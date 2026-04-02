@@ -1,0 +1,25 @@
+{
+  "name": "@leyla-finance/extension",
+  "version": "1.3.0",
+  "private": true,
+  "sideEffects": [
+    "./frontend/*.css",
+    "./frontend/*.module.css"
+  ],
+  "peerDependencies": {
+    "next": "16.2.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  },
+  "exports": {
+    "./finance-window-panels": "./frontend/finance-window-panels.tsx",
+    "./finance-reference": "./frontend/finance-reference.tsx",
+    "./finance-ui-contract-provider": "./frontend/finance-ui-contract-provider.tsx",
+    "./finance-ui-contract": "./frontend/finance-ui-contract.ts"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "extends": "../../apps/web/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": [
+        "../../apps/web/src/*"
+      ]
+    },
+    "types": [
+      "react",
+      "react-dom",
+      "node"
+    ]
+  },
+  "include": [
+    "frontend/**/*.ts",
+    "frontend/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -33,7 +33,7 @@ Bu repo su an `Leyla Unified Platform` icinde embedded SQLite finance source-of-
 - database backend: `sqlite`
 - database driver: `aiosqlite`
 - finance extension status: `ready`
-- finance extension version: `1.2.0`
+- finance extension version: `1.3.0`
 
 ## GitHub UI Contract Sonucu
 
@@ -42,6 +42,13 @@ Bu repo su an `Leyla Unified Platform` icinde embedded SQLite finance source-of-
 - finance pencere tanimlari: `19`
 - finance theme token sayisi: `93`
 - canli HTML kontrolu: `finance-gl` ve `accounting-hub` finance pencereleri kontrat baslik ve alt basliklariyla render edildi
+
+## GitHub Frontend Sahipligi
+
+- finance panel React kaynagi: `frontend/finance-window-panels.tsx`
+- finance referans ekran kaynagi: `frontend/finance-reference.tsx`
+- finance CSS kaynagi: `frontend/finance-window-panels.module.css`, `frontend/finance-reference.module.css`
+- host ERP tarafinda yalniz shim importlari kalir
 
 ## ERP Panel Durumu
 

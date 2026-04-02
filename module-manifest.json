@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "module_slug": "muhasebe-otamasyon",
   "display_name": "Muhasebe Otomasyon Embedded Finance",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "revision": "main",
   "contract_version": "2026.04",
   "minimum_erp_contract_version": "2026.04",
@@ -12,6 +12,16 @@
     "root": "backend",
     "package": "muhasebe_otamasyon_erp",
     "factory": "create_embedded_finance_service"
+  },
+  "frontend": {
+    "root": "frontend",
+    "package": "@leyla-finance/extension",
+    "exports": {
+      "finance_window_panels": "./finance-window-panels",
+      "finance_reference": "./finance-reference",
+      "finance_ui_contract_provider": "./finance-ui-contract-provider",
+      "finance_ui_contract": "./finance-ui-contract"
+    }
   },
   "erp_surfaces": [
     "finance-gl",

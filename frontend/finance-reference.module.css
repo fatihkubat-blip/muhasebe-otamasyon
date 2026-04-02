@@ -1,0 +1,407 @@
+.page {
+  min-height: 100vh;
+  background: var(--finance-ui-reference-page-background, #f4f6f8);
+  color: var(--finance-ui-window-text, #203447);
+  font-size: 12px;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 34px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--finance-ui-reference-utility-active, #5e88aa);
+  background: linear-gradient(
+    180deg,
+    var(--finance-ui-reference-topbar-start, #3f94d0) 0%,
+    var(--finance-ui-reference-topbar-end, #2d75b4) 100%
+  );
+  color: var(--finance-ui-reference-topbar-text, #f4fbff);
+}
+
+.topLeft,
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menuButton {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.topRight {
+  font-size: 11px;
+}
+
+.utilityBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 4px 12px;
+  border-bottom: 1px solid #cad4dc;
+  background: #f5f7fa;
+}
+
+.utilityTab,
+.utilityTabActive {
+  padding: 4px 6px;
+  border: 0;
+  background: transparent;
+  color: #5c7489;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.utilityTabActive {
+  border-bottom: 2px solid var(--finance-ui-reference-utility-active, #2f78b6);
+  color: var(--finance-ui-reference-utility-active-text, #244561);
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 214px minmax(0, 1fr);
+  min-height: calc(100vh - 62px);
+}
+
+.filterRail {
+  border-right: 1px solid #6d7d8b;
+  background: var(--finance-ui-reference-rail-background, #56646f);
+  color: var(--finance-ui-reference-rail-text, #eff6fa);
+}
+
+.filterHead {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.filterTabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.filterTab,
+.filterTabActive {
+  padding: 8px 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.filterTabActive {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.filterForm,
+.currentFilters {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+}
+
+.sectionLabel {
+  color: #dce6ec;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.field {
+  display: grid;
+  gap: 4px;
+}
+
+.field span {
+  color: #dce6ec;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.field select,
+.field input {
+  height: 30px;
+  border: 1px solid #6f808d;
+  background: #62717d;
+  padding: 0 8px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.saveFilterButton {
+  height: 32px;
+  border: 1px solid #7a8b99;
+  background: #6a7a87;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.filterChip {
+  border: 1px solid var(--finance-ui-reference-filter-border, #758897);
+  background: var(--finance-ui-reference-filter-background, #62717d);
+  padding: 8px;
+  color: var(--finance-ui-reference-filter-text, #f5fbff);
+  text-align: left;
+  font-size: 11px;
+}
+
+.emptyState {
+  color: #d9e2e8;
+  font-size: 11px;
+}
+
+.mainArea {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 8px;
+  background: var(--finance-ui-reference-main-background, #ffffff);
+}
+
+.ribbon {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 6px;
+  border: 1px solid #c8d2db;
+  background: var(--finance-ui-reference-ribbon-background, #f4efe2);
+}
+
+.ribbonButton {
+  min-width: 84px;
+  height: 40px;
+  border: 1px solid #cad2d9;
+  background: var(--finance-ui-reference-ribbon-button-background, #ffffff);
+  color: var(--finance-ui-reference-ribbon-button-text, #28445d);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.versionBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  height: 40px;
+  background: var(--finance-ui-reference-badge-background, #b7609d);
+  color: var(--finance-ui-reference-badge-text, #ffffff);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.sectionTabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #d2dae1;
+  padding: 0 4px;
+}
+
+.sectionTab,
+.sectionTabActive {
+  padding: 8px 8px 7px;
+  color: #5f768a;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.sectionTabActive {
+  border-bottom: 2px solid #3382bd;
+  color: #274660;
+}
+
+.metricsRow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.metricCard {
+  border: 1px solid #c8d3dc;
+  background: #f8fafc;
+  padding: 8px;
+}
+
+.metricLabel {
+  color: #667d91;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.metricValue {
+  margin-top: 6px;
+  color: #1f3b53;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.gridRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.gridPanel {
+  border: 1px solid #c8d3dc;
+  background: #ffffff;
+}
+
+.gridToolbar {
+  display: flex;
+  gap: 12px;
+  padding: 6px 8px;
+  border-bottom: 1px solid #d6dde4;
+  color: #607789;
+  font-size: 11px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.table th {
+  padding: 6px 8px;
+  border-bottom: 1px solid #d3dbe2;
+  background: #f5f8fb;
+  color: #607789;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #e1e8ed;
+  color: #24394c;
+  vertical-align: top;
+}
+
+.table tbody tr:nth-child(even) {
+  background: #fbfcfd;
+}
+
+.primaryCell {
+  font-weight: 700;
+}
+
+.secondaryCell {
+  margin-top: 2px;
+  color: #6e8498;
+  font-size: 10px;
+}
+
+.footerRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.footerPanel {
+  border: 1px solid #cad4dc;
+  background: #f8fafc;
+  padding: 10px;
+}
+
+.footerTitle {
+  color: #687f92;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footerValue {
+  margin-top: 8px;
+  color: #1f3c54;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footerText {
+  margin-top: 6px;
+  color: #667c90;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.taskList {
+  display: grid;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.taskRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  color: #24394d;
+  font-size: 11px;
+}
+
+.actionMessage {
+  padding: 8px 10px;
+  border: 1px solid #cad4dc;
+  background: #f8fafc;
+  color: #23425b;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tabStack {
+  display: grid;
+  gap: 8px;
+}
+
+.entryPanel {
+  border: 1px solid #cad4dc;
+  background: #f8fafc;
+  padding: 10px;
+}
+
+.panelHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.inlineActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.inlineAction {
+  min-height: 32px;
+  border: 1px solid #7b8c99;
+  background: #ffffff;
+  padding: 0 10px;
+  color: #21415a;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}

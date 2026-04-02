@@ -7,6 +7,7 @@ Bu repo artik ERP icine gomulu calisan finance extension kaynagidir. Ana calisma
 - Kaynak gercek: `backend/`
 - Sozlesme gercek: `contracts/`
 - UI ve pencere davranisi gercek: `contracts/ui-contract.json`
+- Panel ve tasarim gercek: `frontend/`
 - Kesif ve surum gercek: `module-manifest.json`
 - ERP tarafi yalniz adaptor ve loader katmanidir
 
@@ -16,6 +17,7 @@ Bu nedenle finansla ilgili yeni alanlar once bu repoda tanimlanir, sonra ERP bun
 
 - `backend/muhasebe_otamasyon_erp`: ERP'ye gomulu finance servis fabrikasi ve contract baglantisi
 - `contracts/`: voucher, chart of accounts, current account, e-document ve reporting contract dosyalari
+- `frontend/`: finance panel React/CSS kaynagi; host bu repoyu workspace paketi olarak tuketir
 - `module-manifest.json`: extension discovery, surum, contract ve ERP surface tanimi
 
 ## Runtime Modeli
